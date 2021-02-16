@@ -17,10 +17,6 @@ const ColorPickerReducer = () => {
     });
   };
 
-  console.log(state.current);
-  console.log(state.before);
-  console.log(state.after);
-
   return (
     <>
       <button 
@@ -29,6 +25,7 @@ const ColorPickerReducer = () => {
         id="REDO" onClick={handleClick}>redo</button>
       <input 
         id="RECORD"
+        alt="input"
         type="color"
         value={state.current}
         onChange={handleChange}
