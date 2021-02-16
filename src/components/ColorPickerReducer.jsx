@@ -11,14 +11,24 @@ const ColorPickerReducer = () => {
     });
   };
 
+  const handleClick = ({ target }) => {
+    dispatch({
+      type: target.id
+    });
+  };
+
   console.log(state.current);
+  console.log(state.before);
+  console.log(state.after);
 
   return (
     <>
-      {/* <button onClick={state.before}>undo</button>
-      <button onClick={state.after}>redo</button> */}
+      <button 
+        id="UNDO" onClick={handleClick}>undo</button>
+      <button 
+        id="REDO" onClick={handleClick}>redo</button>
       <input 
-        id="COLOR_CHANGE"
+        id="RECORD"
         type="color"
         value={state.current}
         onChange={handleChange}
