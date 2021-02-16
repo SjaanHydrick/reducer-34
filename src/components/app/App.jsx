@@ -1,6 +1,6 @@
 import React from 'react';
-import ColorPicker from '../ColorPicker';
+import ColorPickerReducer from '../ColorPickerReducer';
 
 export default function App() {
-  return <ColorPicker />;
+  return <ColorPickerReducer />;
 }
