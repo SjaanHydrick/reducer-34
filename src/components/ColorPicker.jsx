@@ -1,10 +1,16 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 
+// hook vv
+
 const useRecord = (init) => {
   const [before, setBefore] = useState([]);
   const [current, setCurrent] = useState(init);
   const [after, setAfter] = useState([]);
+  
+  console.log(before);
+  console.log(current);
+  console.log(after);
 
   const undo = () => {
     setAfter(after => [current, ...after]);
@@ -30,6 +36,8 @@ const useRecord = (init) => {
     current,
   };
 };
+
+// actual function vv
 
 function App() {
   const { current, undo, redo, record } = useRecord('#FF0000');
